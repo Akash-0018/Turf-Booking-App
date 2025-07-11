@@ -1,0 +1,150 @@
+/* frontend/src/styles/Header.css */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .logo svg {
+    margin-right: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .auth-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .login-btn {
+    padding: 8px 16px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .register-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .register-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  .user-menu {
+    position: relative;
+  }
+  
+  .user-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .user-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    margin-top: 10px;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--light-bg);
+  }
+  
+  .dropdown-item.logout {
+    color: var(--error-color);
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .header-container {
+      padding: 10px 15px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .auth-buttons {
+      gap: 5px;
+    }
+  
+    .login-btn, .register-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }

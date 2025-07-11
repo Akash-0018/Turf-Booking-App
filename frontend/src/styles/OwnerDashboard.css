@@ -1,0 +1,236 @@
+/* frontend/src/styles/OwnerDashboard.css */
+.owner-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .add-turf-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .add-turf-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .dashboard-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+  }
+  
+  .tab {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .tab:hover {
+    color: var(--primary-color);
+  }
+  
+  .tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+  }
+  
+  .no-turfs, .no-bookings {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-turfs p, .no-bookings p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .turfs-table-container, .bookings-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .turfs-table, .bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .turfs-table th, .turfs-table td,
+  .bookings-table th, .bookings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .turfs-table th, .bookings-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .turfs-table tr:last-child td,
+  .bookings-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .turfs-table tr.selected {
+    background-color: #e3f2fd;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-bookings-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .view-bookings-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  .edit-btn, .delete-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .edit-btn {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .edit-btn:hover {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #ffebee;
+    color: var(--error-color);
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--error-color);
+    color: white;
+  }
+  
+  .turf-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .turf-selector label {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .turf-selector select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 200px;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .status.confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .status.pending {
+    background-color: #fff8e1;
+    color: #f57f17;
+  }
+  
+  .status.cancelled {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .status.completed {
+    background-color: #e3f2fd;
+    color: #1565c0;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+  
+    .dashboard-tabs {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .tab {
+      padding: 10px 15px;
+    }
+  
+    .turf-selector {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .turf-selector select {
+      width: 100%;
+    }
+  }
